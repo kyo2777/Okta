@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Fact Seru!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      max-width: 500px;
+      width: 90%;
+      padding: 25px 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    h1 {
+      margin-top: 0;
+      color: #ff4b5c;
+      font-size: 26px;
+    }
+    p#fact {
+      font-size: 18px;
+      margin: 20px 0 25px;
+      color: #333;
+      min-height: 60px;
+    }
+    button {
+      background: #ff4b5c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover {
+      background: #e63b4c;
+      transform: translateY(-1px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+    }
+    .small {
+      font-size: 12px;
+      color: #777;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Fun Fact Hari Ini 🎉</h1>
+  <p id="fact">Klik tombol di bawah buat dapetin fun fact random!</p>
+  <button onclick="showRandomFact()">Kasih Aku Fun Fact!</button>
+  <p class="small">Tips: kamu bisa edit sendiri daftar fun fact di dalam kodenya.</p>
+</div>
+
+<script>
+  const facts = [
+    "Lebah madu adalah satu-satunya serangga yang menghasilkan makanan yang dimakan manusia.",
+    "Kucing punya lebih dari 20 otot hanya untuk menggerakkan telinganya.",
+    "Burung hantu tidak bisa menggerakkan bola matanya, jadi mereka memutar leher sampai 270 derajat.",
+    "Pisang sebenarnya adalah jenis berry, sedangkan stroberi bukan berry secara botani.",
+    "Hiu sudah ada di bumi lebih lama dari pohon.",
+    "Air panas bisa membeku lebih cepat daripada air dingin dalam kondisi tertentu (disebut efek Mpemba).",
+    "Gurita punya tiga jantung dan darah berwarna biru.",
+    "Koala punya sidik jari yang hampir mirip dengan manusia.",
+    "Dalam mimpi, wajah orang asing yang kita lihat biasanya wajah orang yang pernah kita lihat di dunia nyata.",
+    "Tawa itu menular karena otak kita punya sistem 'mirror' yang ikut meniru ekspresi orang lain."
+  ];
+
+  function showRandomFact() {
+    const randomIndex = Math.floor(Math.random() * facts.length);
+    const factElement = document.getElementById("fact");
+    factElement.textContent = facts[randomIndex];
+  }
+</script>
+
+</body>
+</html>
